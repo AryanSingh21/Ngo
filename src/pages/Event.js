@@ -9,9 +9,23 @@ const Events = () => {
     console.log("fdfddf");
   }, []);
 
-  const [data, setdata] = useState([]);
+  const [data, setdata] = useState([
+    {
+      title: "Football league",
+      photo_url: "assets/football-1.jpg",
+      date: "12/07/24",
+      address: "Brtish School, sector 75",
+      city: "pune",
+    },
+  ]);
   const [Ldata, setLdata] = useState([
-    { title: "", photo_url: "", date: "", address: "", city: "" },
+    {
+      title: "Football league",
+      photo_url: "/assets/football-1.jpg",
+      date: "12/07/24",
+      address: "Brtish School, sector 75",
+      city: "pune",
+    },
   ]);
   // useEffect(() => {
   //   const getEvents = async () => {
@@ -46,12 +60,15 @@ const Events = () => {
           marginwidth="0"
           title="map"
           scrolling="no"
-          src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242117.70906969727!2d73.69815309340441!3d18.524870610788827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1719377051405!5m2!1sen!2sin"
         ></iframe>
-        <div className="absolute m-auto left-5 md:top-10 md:left-10">
-          <div className="w-[250px] bg-white border-2 border-black  flex flex-col">
+        <div className="absolute m-auto left-3 md:top-21 md:left-5">
+          <div className="w-[120px] bg-white border-2 border-black  flex flex-col">
             <img src={Ldata[0].photo_url} className="w-full" />
-            <h3 className="text-center text-red-500 font-bold mt-2">
+            <h3
+              className="text-center  font-bold mt-2"
+              style={{ color: "maroon" }}
+            >
               Upcoming Event
             </h3>
 
@@ -67,7 +84,9 @@ const Events = () => {
       </div>
       <h1 className="text-center text-5xl mt-5">
         Upcoming{" "}
-        <span className="text-red-500 text-center text-5xl mt-5">Events</span>
+        <span className="text-center text-5xl mt-5" style={{ color: "maroon" }}>
+          Events
+        </span>
       </h1>
       <EventsCards data={data} />
     </div>

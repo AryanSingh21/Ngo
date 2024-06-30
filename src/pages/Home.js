@@ -6,6 +6,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import FeaturedCard from "../components/FeaturedCard";
+import SkillCard from "../components/SkillCard";
 
 const Home = () => {
   React.useEffect(() => {
@@ -27,29 +28,46 @@ const Home = () => {
   // const [team, setteam] = useState([]);
   const [help, sethelp] = useState([]);
   const [reviews, setreviews] = useState([]);
-
   // raised={cause.raised_money}
   // goal={cause.goal}
   // title={cause.title}
   // img={cause.photourl}
+  const nums = [
+    {
+      num: 188,
+      name: "Human Impacted",
+    },
+    {
+      num: 90 + "+",
+      name: "Collaborators",
+    },
+    {
+      num: 130,
+      name: "Donations",
+    },
+    {
+      num: 50 + "+",
+      name: "Communities",
+    },
+  ];
   const data = [
     {
       raised_money: 1200,
-      goal: 3600,
-      title: "Mem",
-      photourl: "assets/ga1.png",
+      goal: "We aim to provide comprehensive football training to underprivileged children, helping them develop their skills and reach their full potential",
+      title: "Skill development",
+      photourl: "assets/football-4.jpeg",
     },
     {
       raised_money: 1200,
-      goal: 3600,
-      title: "Mem",
-      photourl: "assets/ga2.png",
+      goal: "Through football, we strive to create a more inclusive society, breaking down barriers based on socio-economic backgrounds",
+      title: "Social Inclusion",
+      photourl: "assets/football-2.jpeg",
     },
     {
       raised_money: 1200,
-      goal: 3600,
-      title: "Mem",
-      photourl: "assets/help3.png",
+      goal: "By equiping these children with life skills and self confidence, we aim to empower them to overcome challenges and succeed in all aspects of life",
+      title: "Empowerment",
+      photourl: "assets/football-3.jpeg",
     },
   ];
   const team = [
@@ -83,59 +101,62 @@ const Home = () => {
 
         <div class="banner-text">
           <p class="banner-heading-1">
-            <span>ABANDONED</span>
-            <span> AND</span> <span>ALONE</span>
+            <span>SNIGMAY</span>
+            <span style={{ color: "maroon" }}> FOUNDATION</span>
           </p>
           <p class="banner-heading-2">
-            <span>Yearning</span> <span>for a</span> <span>touch of hope</span>
+            <span>Together</span> <span>we can</span> <span>Make a</span>
+            <span style={{ color: "maroon", border: "none" }}> Difference</span>
           </p>
           <p class="banner-heading-3">
-            Her eyes tell a story of lost innocence and quiet desperation. This
-            young girl, abandoned and alone, waits for a touch of hope. With
-            your support, we can give her the chance to experience the warmth
-            and security every child deserves. Together, we can transform her
-            silent dreams into a future full of love and possibilities.
+            Welcome to Snigmay Foundation, where passion meets purpose on the
+            football field. We believe in the power of football to transform
+            lives, unite communities, and inspire future generations. Our
+            mission is to support and develop young talent, provide access to
+            quality training facilities, and promote the values of teamwork,
+            discipline, and fair play
           </p>
           <button
             onClick={() => {
-              navigate("causes");
+              navigate("/about");
             }}
           >
-            Donate Now
+            About Us
           </button>
         </div>
       </section>
       <section class="help-section">
-        <p>
+        {/* <p>
           HOW COULD <span style={{ color: "var(--red)" }}>YOU HELP ?</span>
-        </p>
-        <div class="help-container">
-          {help.map((e) => {
-            return (
-              <div class="cards">
-                <div class="help-img">
-                  <img src="/public/assets/gold_bg.jpg" />
-                </div>
-                <h1>{e.title}</h1>
-                <p>{e.descr}</p>
-              </div>
-            );
-          })}
+        </p> */}
+        <p style={{ color: "maroon" }}>WELCOME TO SNIGMAY FOUNDATION</p>
+        <div className="border-div">
+          <h1 style={{ fontSize: "25px" }}>
+            Pune based non-pofit organisation focusing on nation building
+            through youth development, sports and women empowerment. We believe
+            in the power of football to transform lives of under privileged
+            children in India
+          </h1>
         </div>
       </section>
       <section class="about-us">
         <div class="about-us-1">{/* <img src="assets/about.png" /> */}</div>
         <div class="about-us-2">
           <div class="about-text">
-            <p class="about-heading-2">WE ARE</p>
-            <p class="about-heading-2">NON-PROFIT TEAM</p>
-            <p class="about-heading-3">
-              We are a team of dedicated individuals, volunteers, and supporters
-              who share a common vision: to alleviate suffering, promote
-              equality, and uplift communities. With unwavering determination
-              and a heartfelt passion for change, we have undertaken numerous
-              projects and initiatives.
+            <p class="about-heading-2">GIVE HELP</p>
+            <p class="about-heading-2" style={{ fontSize: "40px" }}>
+              TO THOSE WHO NEED IT
             </p>
+            <div className="num-div">
+              {nums.map((data) => {
+                return (
+                  <div className="num-div-inner">
+                    <p>{data.num}</p>
+                    <h1>{data.name}</h1>
+                  </div>
+                );
+              })}
+            </div>
             <button
               onClick={() => {
                 navigate("causes");
@@ -148,16 +169,15 @@ const Home = () => {
       </section>
       <section class="feature-section">
         <p>
-          FEATURED <span style={{ color: "var(--red)" }}>CAUSES</span>
+          WHAT WE <span style={{ color: "maroon" }}>DO</span>
         </p>
 
         <div class="featured-container">
           {data.map((cause) => {
             return (
-              <FeaturedCard
-                raised={cause.raised_money}
-                goal={cause.goal}
+              <SkillCard
                 title={cause.title}
+                desc={cause.goal}
                 img={cause.photourl}
               />
             );
@@ -220,7 +240,7 @@ const Home = () => {
       </Slider>
       <section class="volunteer">
         <p class="title">
-          OUR <span style={{ color: "var(--red)" }}>TEAM</span>
+          OUR <span style={{ color: "maroon" }}>TEAM</span>
         </p>
 
         <div class="help-container">

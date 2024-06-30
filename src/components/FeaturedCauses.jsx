@@ -13,24 +13,27 @@ const FeaturedCauses = () => {
   //   getCauses();
   // }, []);
   return (
-    <section class="feature-section mb-20">
-      <p>
-        FEATURED <span style={{ color: "var(--red)" }}>CAUSES</span>
-      </p>
+    <>
+      {/* <p>
+        FEATURED <span style={{ color: "maroon" }}>CAUSES</span>
+      </p> */}
 
-      <div class="featured-container">
-        {/* {data.map((cause) => {
-          return (
-            <FeaturedCard
-              raised={cause.raised_money}
-              goal={cause.goal}
-              title={cause.title}
-              img={cause.photourl}
-            />
-          );
-        })} */}
+      <div
+        className="m-div-1"
+        style={{ backgroundImage: "none", transform: "none" }}
+      >
+        <div
+          className="div-1-img"
+          style={{ height: "40vh", width: "30vw", backgroundColor: "aqua" }}
+        ></div>
+        <p style={{ width: "50%", color: "black" }}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit esse
+          provident asperiores veritatis est minima saepe minus quia adipisci
+          illum repudiandae eaque error quaerat laborum aspernatur, dolorum ut
+          doloribus? Corrupti?
+        </p>
       </div>
-    </section>
+    </>
   );
 };
 

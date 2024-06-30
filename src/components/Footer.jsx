@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 
 const Footer = () => {
   const [Links, setLinks] = useState(false);
@@ -11,7 +12,7 @@ const Footer = () => {
         <div class="contact-1">
           <i class="fa fa-phone" id="call" aria-hidden="true"></i>
           <p class="question">DO YOU HAVE A QUESTION?</p>
-          <p class="number">+0123 456 789</p>
+          <p class="number">+91-99206 14314</p>
         </div>
         <div class="contact-2">
           <div>
@@ -37,17 +38,36 @@ const Footer = () => {
           <div class="footer-about">
             <h1>OUR MISSION</h1>
             <p>
-              Bringing clean water to an Asian village is a vital and impactful
-              endeavor that can significantly improve the lives of the
-              community's residents. Access to clean and safe drinking water is
-              a fundamental human right
+              We believe in the power of football to transform lives, unite
+              communities, and inspire future generations. Our mission is to
+              support and develop young talent, provide access to quality
+              training facilities, and promote the values of teamwork,
+              discipline, and fair play
             </p>
             <br />
             <p>
-              Initiatives focused on delivering clean water to Asian villages
-              serve as a testament to our collective responsibility in ensuring
-              a sustainable and equitable world.
+              We believe in the power of football to transform lives, unite
+              communities, and inspire future generations. Our mission is to
+              support and develop young talent, provide access to quality
+              training facilities, and promote the values of teamwork,
+              discipline, and fair play
             </p>
+            <SocialIcon
+              url="https://x.com/snigmayfc?s=11"
+              style={{ marginTop: "4vh", marginRight: "1vw" }}
+            />
+            <SocialIcon
+              url="https://www.facebook.com/snigmayfc?mibextid=uzlsIk"
+              style={{ marginTop: "4vh", marginRight: "1vw" }}
+            />
+            <SocialIcon
+              url=" https://youtube.com/@snigmaypunefc?si=mNsbgBePBG3VODCW"
+              style={{ marginTop: "4vh", marginRight: "1vw" }}
+            />
+            <SocialIcon
+              url=" https:// www.instagram.com/snigmaypunefc?igsh=MXQ2dTRyYzNyYXhldw=="
+              style={{ marginTop: "4vh", marginRight: "1vw" }}
+            />
           </div>
 
           <div class="footer-links">
@@ -99,16 +119,16 @@ const Footer = () => {
             </h2>
             <div class={"gal-container " + (Gallery && "gal-container-active")}>
               <div>
-                <img src="assets/ga1.png" />
-                <img src="assets/ga2.png" />
+                <img src="assets/foot-team-1.jpeg" />
+                <img src="assets/football-2.jpeg" />
               </div>
               <div>
-                <img src="assets/gap3.png" />
-                <img src="assets/gal4.png" />
+                <img src="assets/football-3.jpeg" />
+                <img src="assets/football-4.jpeg" />
               </div>
               <div>
-                <img src="assets/gal5.png" />
-                <img src="assets/gal6.png" />
+                <img src="assets/football-5.jpeg" />
+                <img src="assets/main-football.jpg" />
               </div>
             </div>
           </div>
@@ -136,8 +156,8 @@ const Footer = () => {
                   <h3>Head Office</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>Krushna Colony, Rahatani, Pune</p>
+                  <p>Maharashtra 411017</p>
                 </div>
               </div>
               <div class="contact-card">
@@ -148,8 +168,8 @@ const Footer = () => {
                   <h3>Phone Number</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>+91 83800 02233</p>
+                  <p>+91 99206 14314</p>
                 </div>
               </div>
               <div class="contact-card">
@@ -160,15 +180,13 @@ const Footer = () => {
                   <h3>Email</h3>
                 </div>
                 <div class="contact-ad">
-                  <p>123, Main Street, Your City</p>
-                  <p>USA 789456</p>
+                  <p>tanaya@snigmaypunefc.com</p>
+                  <p>+91-99206 14314</p>
                 </div>
               </div>
             </div>
           </div>
-          <p class="copyright">
-            Copyright @ 2023. Developed by Harshit Chadha. All Rights Reserved.
-          </p>
+          <p class="copyright">Copyright @ 2024. Developed by Aryan Singh.</p>
         </div>
       </section>
     </footer>

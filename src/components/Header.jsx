@@ -11,19 +11,25 @@ const Header = ({ path, User }) => {
         <Link to="/">{/* <img src="assets/ribbon.png" class="logo" /> */}</Link>
         <Link to="/">
           <div class="logo-text">
-            <h1
+            {/* <h1
               class="logo-header"
               style={{ color: "#fff548", borderBlockColor: "white" }}
             >
               SNIGMAY
             </h1>
-            <p style={{ color: "white" }}>FOUNDATION</p>
+            <p style={{ color: "white" }}>FOUNDATION</p> */}
+            <img
+              src="assets/logo-2.jpg"
+              alt=""
+              className="logo-img"
+              style={{ height: "18vh", width: "8vw", borderRadius: "10vw" }}
+            />
           </div>
         </Link>
       </div>
 
       <div class="ham-btn">
-        {Toggle == "active" ? (
+        {Toggle === "active" ? (
           <i
             class="fa fa-times"
             onClick={() => {
@@ -50,7 +56,10 @@ const Header = ({ path, User }) => {
             <li>
               <a
                 href="#"
-                style={{ color: path == "/" ? "#fff548" : "whitesmoke" }}
+                style={{
+                  color: path == "/" ? "#fff548" : "whitesmoke",
+                  // fontSize: "1.2rem",
+                }}
               >
                 Home
               </a>
@@ -60,7 +69,10 @@ const Header = ({ path, User }) => {
             <li>
               <a
                 href="#"
-                style={{ color: path == "/about" ? "#fff548" : "whitesmoke" }}
+                style={{
+                  color: path == "/about" ? "#fff548" : "whitesmoke",
+                  // fontSize: "1.2rem",
+                }}
               >
                 About
               </a>
@@ -70,9 +82,12 @@ const Header = ({ path, User }) => {
             <li>
               <a
                 href="#"
-                style={{ color: path == "/causes" ? "#fff548" : "whitesmoke" }}
+                style={{
+                  color: path == "/causes" ? "#fff548" : "whitesmoke",
+                  // fontSize: "1.2rem",
+                }}
               >
-                Causes
+                Our Programs
               </a>
             </li>
           </Link>
@@ -80,7 +95,10 @@ const Header = ({ path, User }) => {
             <li>
               <a
                 href="#"
-                style={{ color: path == "/events" ? "#fff548" : "whitesmoke" }}
+                style={{
+                  color: path == "/events" ? "#fff548" : "whitesmoke",
+                  // fontSize: "1.2rem",
+                }}
               >
                 Event
               </a>
@@ -90,7 +108,10 @@ const Header = ({ path, User }) => {
             <li>
               <a
                 href="#"
-                style={{ color: path == "/news" ? "#fff548" : "whitesmoke" }}
+                style={{
+                  color: path == "/news" ? "#fff548" : "whitesmoke",
+                  // fontSize: "1.2rem",
+                }}
               >
                 News
               </a>
@@ -100,7 +121,10 @@ const Header = ({ path, User }) => {
             <li>
               <a
                 href="#"
-                style={{ color: path == "/contact" ? "#fff548" : "whitesmoke" }}
+                style={{
+                  color: path == "/contact" ? "#fff548" : "whitesmoke",
+                  // fontSize: "1.2rem",
+                }}
               >
                 Contact
               </a>

@@ -20,32 +20,20 @@ const Stats = ({ donation, User }) => {
   // });
   return (
     <div className="w-full p-4">
-      <div className="w-full">
-        <table className="w-full bg-white border border-gray-300">
-          <thead>
-            <tr>
-              <th className="py-2 px-4 border-b">ID</th>
-
-              <th className="py-2 px-4 border-b">Amount</th>
-              <th className="py-2 px-4 border-b">Donation Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {UserDonations.map((donation) => (
-              <tr key={donation.id} className="hover:bg-gray-100">
-                <td className="py-2 px-4 border-b text-black text-center">
-                  {donation.id}
-                </td>
-                <td className="py-2 px-4 border-b text-black text-center">
-                  {donation.Amount}
-                </td>
-                <td className="py-2 px-4 border-b text-center">
-                  {donation.Donation_Date.slice(0, 10)}{" "}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div
+        className="m-div-1"
+        style={{ backgroundImage: "none", transform: "none" }}
+      >
+        <p style={{ width: "50%", color: "black" }}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit esse
+          provident asperiores veritatis est minima saepe minus quia adipisci
+          illum repudiandae eaque error quaerat laborum aspernatur, dolorum ut
+          doloribus? Corrupti?
+        </p>
+        <div
+          className="div-1-img"
+          style={{ height: "40vh", width: "30vw", backgroundColor: "aqua" }}
+        ></div>
       </div>
     </div>
   );

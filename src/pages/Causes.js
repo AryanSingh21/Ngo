@@ -5,8 +5,8 @@ import DonationCard from "../components/DonationCard";
 import axios from "axios";
 
 const Causes = () => {
-  const active = "bg-white text-red-500";
-  const inactive = "bg-red-500 text-white";
+  const active = "bg-white-500 text-black-500";
+  const inactive = "bg-white-500 text-white";
   const [One, setOne] = useState(inactive);
   const [Two, setTwo] = useState(inactive);
   const [Three, setThree] = useState(active);
@@ -35,7 +35,7 @@ const Causes = () => {
         id="causes-banner"
       >
         <div className="flex flex-col w-[90%] md:w-[50%] h-full justify-around text-center text-gray-100">
-          <h1 className="text-6xl tracking-tighter font-sans">Our Causes</h1>
+          <h1 className="text-6xl tracking-tighter font-sans">Our Programs</h1>
           <p className="text-gray-200">
             We are a team of dedicated individuals, volunteers, and supporters
             who share a common vision: to alleviate suffering, promote equality,
@@ -49,9 +49,7 @@ const Causes = () => {
 
       <div className="flex w-full items-center flex-col mt-10">
         <div className="md:w-[80%] w-[98%] flex items-start">
-          <h1 className="text-3xl font-bold py-5">
-            Ensure Education For Every Poor Children
-          </h1>
+          <h1 className="text-3xl font-bold py-5">Football is life</h1>
         </div>
 
         <div className="flex flex-col md:w-[80%] w-[98%] border-2 border-black items-center">
@@ -63,22 +61,22 @@ const Causes = () => {
             <div className="w-full h-20 bg-yellow-500 flex">
               <button
                 className={
-                  "border-0 py-2 bg-white-500 px-6 focus:outline-none hover:bg-white hover:text-red-500 rounded-none text-lg " +
+                  "border-0 py-2 bg-yellow-500 px-6 focus:outline-none hover:bg-white hover:text-black-500 rounded-none text-lg " +
                   Three
                 }
                 bg-white
-                text-red-500
+                text-black-500
                 onClick={() => {
                   setOne(inactive);
                   setTwo(inactive);
                   setThree(active);
                 }}
               >
-                Donations
+                Skills Enhancement Sessions
               </button>
               <button
                 className={
-                  "border-0 py-2 bg-yellow-500 px-6 focus:outline-none hover:bg-white hover:text-red-500 rounded-none text-lg " +
+                  "border-0 py-2 bg-yellow-500 px-6 focus:outline-none hover:bg-white hover:text-black-500 rounded-none text-lg " +
                   Two
                 }
                 onClick={() => {
@@ -87,23 +85,21 @@ const Causes = () => {
                   setThree(inactive);
                 }}
               >
-                Featured Causes
+                Comprehensive Development Workshops
               </button>
-              {User.session && (
-                <button
-                  className={
-                    "border-0 py-2 px-6 focus:outline-none hover:bg-white hover:text-red-500 rounded-none text-lg " +
-                    One
-                  }
-                  onClick={() => {
-                    setOne(active);
-                    setTwo(inactive);
-                    setThree(inactive);
-                  }}
-                >
-                  My Donations
-                </button>
-              )}
+              <button
+                className={
+                  "border-0 py-2 bg-yellow-500 px-6 focus:outline-none hover:bg-white hover:text-black-500 rounded-none text-lg " +
+                  One
+                }
+                onClick={() => {
+                  setOne(active);
+                  setTwo(inactive);
+                  setThree(inactive);
+                }}
+              >
+                Community Engagement and Support
+              </button>
             </div>
 
             <div className="w-full">
